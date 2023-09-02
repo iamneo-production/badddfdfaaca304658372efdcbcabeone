@@ -26,7 +26,7 @@ const makeMove = (indexX, indexY) => {
 
         // Check for a win after each move
         if (checkWin()) {
-            result.textContent = `Player ${currentPlayer} won`;
+            result.textContent = `Player ${currentPlayer} Won`;
             disableAllButtons();
         } else if (cells.every((cell) => cell !== '')) {
             result.textContent = "It's a draw";
@@ -66,7 +66,7 @@ const resetGame = () => {
     });
 
     // Reset the result message
-    result.textContent = `Player ${currentPlayer}'s Turn`;
+    result.textContent = `Player ${currentPlayer} Turn`;
 };
 
 // Event delegation to handle button clicks
