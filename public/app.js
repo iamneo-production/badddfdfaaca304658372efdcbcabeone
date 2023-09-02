@@ -59,13 +59,23 @@ const disableAllButtons = () => {
 const resetGame = () => {
     cells = ['', '', '', '', '', '', '', '', ''];
     currentPlayer = 'X';
-    result.textContent = `Player ${currentPlayer}'s Turn`;
 
     btns.forEach((btn, i) => {
         btn.textContent = '';
         btn.disabled = false;
-        btn.addEventListener('click', () => makeMove(Math.floor(i / 3), i % 3));
     });
+
+    // Reset the result message
+    result.textContent = `Player ${currentPlayer}'s Turn`;
 };
+
+// Event delegation to handle button clicks
+document.querySelector('.box').addEventListener('click', (event) => {
+    const button = event.target;
+    if (button.classList.contains('btn')) {
+        const index = button.getAttribute('data-index');
+        makeMove(Math.floor(index / 3), index % 3);
+    }
+});
 
 document.querySelector('#reset').addEventListener('click', resetGame);
