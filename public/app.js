@@ -26,10 +26,10 @@ const makeMove = (indexX, indexY) => {
 
         // Check for a win after each move
         if (checkWin()) {
-            result.textContent = `Player ${currentPlayer} wins!`;
+            result.textContent = `Player ${currentPlayer} wins`;
             disableAllButtons();
         } else if (cells.every((cell) => cell !== '')) {
-            result.textContent = "It's a draw!";
+            result.textContent = "It's a draw";
         } else {
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
             result.textContent = `Player ${currentPlayer}'s Turn`;

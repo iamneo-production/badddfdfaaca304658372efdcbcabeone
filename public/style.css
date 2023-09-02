@@ -29,9 +29,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 35px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
@@ -82,7 +79,7 @@ body {
 
 /* Result Styling */
 .result {
-    color: #000; /* Change text color to black */
+    color: #000;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     font-size: 25px;
 }
@@ -95,9 +92,9 @@ body {
 /* Reset Button Styling */
 .reset-button {
     border: 2px solid #000;
-    color: #000; /* Change text color to black */
+    color: #000;
     cursor: pointer;
-    background-color: #fff; /* Set background color to white */
+    background-color: #fff;
     transition: background-color 0.3s, color 0.3s;
     padding: 5px 15px;
     font-size: 20px;
